@@ -1,0 +1,37 @@
+﻿.title {
+    font-size: 30;
+    horizontal-align: center;
+    margin: 20;
+}
+
+button {
+    horizontal-align: center;
+}
+
+Button:highlighting {
+   background-color:#ccc;
+}
+
+.message {
+    font-size: 20;
+    color: #284848;
+    horizontal-align: center;
+    margin: 0 20;
+    text-align: center;
+}
+
+Textfield {
+    border-width: 1;
+    border-color: #ccc;
+    border-style: solid;
+    padding: 15;
+    margin: 10;
+    background-color: #f7f7f7;
+}
+
+Button.page-button {
+    background-color: #FECB2C;
+    padding: 10;
+    color: #FFFFFF;
+    font-size: 42;
+}

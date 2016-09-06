@@ -1,0 +1,28 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <Page.actionBar>
+    <ActionBar backgroundColor="#FECB2C" color="#000000" title="Taxi aFAREs"/>
+  </Page.actionBar>
+  <GridLayout rows="*,auto,auto" columns="auto">
+    <StackLayout row="0" orientation="vertical" horizontalAlignment="center">
+      <!-- Taxi Fare can come from List of routes e.g Wonderpark to Pretoria-->
+      <TextField text="{{selectedFare}}" hint="Fare" />
+      <TextField returnKeyType="go" returnPress="{{calculateFare}}" keyboardType="number" text="{{tendered}}" hint="Tendered" />
+
+      <Button class="page-button" text="Calculate" tap="{{calculateFare}}" />
+      
+      <Repeater items="{{resultList}}">
+        <Repeater.itemTemplate>
+          <Label text="{{ $value }}" />
+        </Repeater.itemTemplate>
+      </Repeater>
+
+      <Button text="More than 4 passengers?" tap="more" />
+    </StackLayout>
+    <StackLayout row="1" orientation="horizontal" horizontalAlignment="center">
+      <Label text="Total Fare: R " textWrap="true" textAlign="center"/>
+      <Label text="{{ passengersTotal }}" textWrap="true" textAlign="center" />
+    </StackLayout>
+
+    <Label row="2" style="font-size: 9; text-align: center;" dock="bottom" text="{{littleWarningMessage}}" textWrap="true"/>
+  </GridLayout>
+</Page>
